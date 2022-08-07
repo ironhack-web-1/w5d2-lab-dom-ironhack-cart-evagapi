@@ -21,12 +21,15 @@ function calculateAll() {
   // ITERATION 2
   //... your code goes here
   const products = document.querySelectorAll('tr.product');
+  const totalElement = document.querySelector('#total-value span');
+  let total = 0;
   for (let index = 0; index < products.length; index++) {
     const product = products[index];
-    updateSubtotal(product);
+    total += updateSubtotal(product);
   }
   // ITERATION 3
   //... your code goes here
+  totalElement.innerHTML = total;
 }
 
 // ITERATION 4
